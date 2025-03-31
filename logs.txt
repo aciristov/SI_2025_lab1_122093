@@ -4,3 +4,13 @@ git pull origin master
 git status
 git add .
 git commit -m "Initial commit"
+git add .
+	Changes to be committed:
+	  (use "git restore --staged <file>..." to unstage)
+			new file:   SI2025Lab1Main.java
+			new file:   logs.txt
+git commit -m "starter code"
+git add .
+git status
+git commit -m "java class added"
+git push --set-upstream origin master
