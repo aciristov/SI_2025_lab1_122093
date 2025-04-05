@@ -14,3 +14,93 @@ git add .
 git status
 git commit -m "java class added"
 git push --set-upstream origin master
+git fetch origin
+From https://github.com/aciristov/SI_2025_lab1_122093
+ * [new branch]      2-find-all-completed-tasks -> origin/2-find-all-completed-tasks
+ * [new branch]      3-list-tasks-sorted-by-name -> origin/3-list-tasks-sorted-by-name
+ * [new branch]      9-mark-all-tasks-in-a-category-as-completed -> origin/9-mark-all-tasks-in-a-category-as-completed
+git checkout 2-find-all-completed-tasks
+Switched to a new branch '2-find-all-completed-tasks'
+git status
+modified:   SI2025Lab1Main.java
+git add .
+git commit -m "#2-Find all completed tasks"
+1 file changed, 22 insertions(+), 8 deletions(-)
+git push
+To https://github.com/aciristov/SI_2025_lab1_122093
+   7241e84..3554b73  2-find-all-completed-tasks -> 2-find-all-completed-tasks
+git add .
+git commit -m "#2-FInd all completed tasks, CHANGES"
+git push
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/aciristov/SI_2025_lab1_122093
+   3554b73..4dcdb22  2-find-all-completed-tasks -> 2-find-all-completed-tasks
+git status
+git checkout master
+git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 915 bytes | 457.00 KiB/s, done.
+From https://github.com/aciristov/SI_2025_lab1_122093
+   7241e84..e6e913e  master     -> origin/master
+Updating 7241e84..e6e913e
+Fast-forward
+ SI2025Lab1Main.java | 35 +++++++++++++++++++++++++----------
+ 1 file changed, 25 insertions(+), 10 deletions(-)
+git checkout 3-list-tasks-sorted-by-name
+git merge master
+git status
+modified:   SI2025Lab1Main.java
+git add .
+git commit -m "#3-list tasks sorted by name"
+git push
+To https://github.com/aciristov/SI_2025_lab1_122093
+   7241e84..59f41a8  3-list-tasks-sorted-by-name -> 3-list-tasks-sorted-by-name
+git checkout 9-mark-all-tasks-in-a-category-as-completed
+git merge master
+Updating 7241e84..e6e913e
+Fast-forward
+ SI2025Lab1Main.java | 35 +++++++++++++++++++++++++----------
+ 1 file changed, 25 insertions(+), 10 deletions(-)
+git checkout master
+git pull
+Updating e6e913e..00e7a08
+Fast-forward
+ SI2025Lab1Main.java | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+git checkout 9-mark-all-tasks-in-a-category-as-completed
+git merge master
+Updating e6e913e..00e7a08
+Fast-forward
+ SI2025Lab1Main.java | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ git add .
+ git commit -m ""#9-mark all tasks in a category as completed""
+ [9-mark-all-tasks-in-a-category-as-completed 3970dbf] #9-mark all tasks in a category as completed
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+ git push
+ To https://github.com/aciristov/SI_2025_lab1_122093
+   7241e84..3970dbf  9-mark-all-tasks-in-a-category-as-completed -> 9-mark-all-tasks-in-a-category-as-completed
+git checkout master
+git pull
+PS C:\Users\aciri\OneDrive\Documents\si\2025\SI_2025_lab1_122093> git log --oneline --graph --all
+*   a2baca6 (HEAD -> master, origin/master) Merge pull request #12 from aciristov/9-mark-all-tasks-in-a-category-as-completed
+|\
+| * 3970dbf (origin/9-mark-all-tasks-in-a-category-as-completed, 9-mark-all-tasks-in-a-category-as-completed) #9-mark all tasks in a category as completed
+|/
+*   00e7a08 Merge pull request #11 from aciristov/3-list-tasks-sorted-by-name
+|\
+| * 59f41a8 (origin/3-list-tasks-sorted-by-name, 3-list-tasks-sorted-by-name) #3-list tasks sorted by name
+|/
+*   e6e913e Merge pull request #10 from aciristov/2-find-all-completed-tasks
+|\
+| * 4dcdb22 (origin/2-find-all-completed-tasks, 2-find-all-completed-tasks) #2-FInd all completed tasks, CHANGES
+| * 3554b73 #2-Find all completed tasks
+|/
+* 7241e84 logs updated
+* 52c1238 java class added
+* e204dcd starter code
+* 5bf85f8 Initial commit
+* b711154 Initial commit
+PS C:\Users\aciri\OneDrive\Documents\si\2025\SI_2025_lab1_122093>
