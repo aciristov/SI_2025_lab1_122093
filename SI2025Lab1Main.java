@@ -85,7 +85,7 @@ class TaskManager {
 
     // 3. List tasks sorted by name
     public void sortTasksByName() {
-        // TODO: Implement sorting logic
+        Collections.sort(tasks, Comparator.comparing(Task::getName));
     }
 
     // 4. Sort tasks by priority
@@ -136,6 +136,7 @@ public class SI2025Lab1Main {
         // MISSING: Calls to the new methods that will be implemented
 
 //        manager.printTasks();
+        manager.sortTasksByName();
         manager.printCompletedTasks();
     }
 }
