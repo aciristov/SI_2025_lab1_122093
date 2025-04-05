@@ -10,11 +10,11 @@ class Task {
     private Priority priority;
     private String category;
 
-    public Task(String name, Priority priority, String category) {
+    public Task(String name, Priority priority, String category, boolean isCompleted) {
         this.name = name;
         this.priority = priority;
         this.category = category;
-        this.isCompleted = false;
+        this.isCompleted = isCompleted;
     }
 
     public void complete() {
@@ -37,6 +37,10 @@ class Task {
         return category;
     }
 
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
+    }
+
     @Override
     public String toString() {
         return name + " [" + category + "] - Priority: " + priority + (isCompleted ? " [Completed]" : " [Pending]");
@@ -50,8 +54,8 @@ class TaskManager {
         this.tasks = new ArrayList<>();
     }
 
-    public void addTask(String name, Priority priority, String category) {
-        tasks.add(new Task(name, priority, category));
+    public void addTask(String name, Priority priority, String category, boolean isCompleted) {
+        tasks.add(new Task(name, priority, category, isCompleted));
     }
 
     public void printTasks() {
@@ -70,6 +74,10 @@ class TaskManager {
     // 2. Find all completed tasks
     public List<Task> getCompletedTasks() {
         // TODO: Implement logic to return completed tasks
+        for (Task task : tasks){
+
+        }
+
         return new ArrayList<>();
     }
 
@@ -112,12 +120,18 @@ class TaskManager {
     }
 }
 
+
 public class SI2025Lab1Main {
     public static void main(String[] args) {
+        /***
+         * Se upotrebeni vekje kreiranite TaskManager's, dodaden e samo isCompleted
+         */
         TaskManager manager = new TaskManager();
-        manager.addTask("Write report", Priority.HIGH, "Work");
-        manager.addTask("Submit assignment", Priority.MEDIUM, "School");
-        manager.addTask("Buy groceries", Priority.LOW, "Personal");
+        manager.addTask("Write report", Priority.HIGH, "Work", true);
+        manager.addTask("Submit assignment", Priority.MEDIUM, "School", false);
+        manager.addTask("Buy groceries", Priority.LOW, "Personal", true);
+
+
 
         // MISSING: Calls to the new methods that will be implemented
 
