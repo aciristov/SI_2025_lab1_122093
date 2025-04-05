@@ -119,6 +119,11 @@ class TaskManager {
     // 9. Mark all tasks in a category as completed
     public void markCategoryCompleted(String category) {
         // TODO: Implement bulk completion logic
+        for (Task task : tasks){
+            if (task.getCategory().equals(category)){
+                task.setCompleted(true);
+            }
+        }
     }
 }
 
@@ -129,14 +134,17 @@ public class SI2025Lab1Main {
          * Se upotrebeni vekje kreiranite TaskManager's, dodaden e samo dali e isCompleted vo prvi i treti task.
          */
         TaskManager manager = new TaskManager();
-        manager.addTask("Write report", Priority.HIGH, "Work", true);
+        manager.addTask("Write report", Priority.HIGH, "Work", false);
         manager.addTask("Submit assignment", Priority.MEDIUM, "School", false);
-        manager.addTask("Buy groceries", Priority.LOW, "Personal", true);
+        manager.addTask("Buy groceries", Priority.LOW, "Personal", false);
 
         // MISSING: Calls to the new methods that will be implemented
 
-//        manager.printTasks();
+        manager.printTasks();
         manager.sortTasksByName();
         manager.printCompletedTasks();
+        manager.printTasks();
+        manager.markCategoryCompleted("School");
+        manager.printTasks();
     }
 }
