@@ -72,10 +72,12 @@ class TaskManager {
     }
 
     // 2. Find all completed tasks
-    public List<Task> getCompletedTasks() {
+    public List<Task> printCompletedTasks() {
         // TODO: Implement logic to return completed tasks
         for (Task task : tasks){
-
+            if (task.isCompleted()) {
+                System.out.println(task);
+            }
         }
 
         return new ArrayList<>();
@@ -124,17 +126,16 @@ class TaskManager {
 public class SI2025Lab1Main {
     public static void main(String[] args) {
         /***
-         * Se upotrebeni vekje kreiranite TaskManager's, dodaden e samo isCompleted
+         * Se upotrebeni vekje kreiranite TaskManager's, dodaden e samo dali e isCompleted vo prvi i treti task.
          */
         TaskManager manager = new TaskManager();
         manager.addTask("Write report", Priority.HIGH, "Work", true);
         manager.addTask("Submit assignment", Priority.MEDIUM, "School", false);
         manager.addTask("Buy groceries", Priority.LOW, "Personal", true);
 
-
-
         // MISSING: Calls to the new methods that will be implemented
 
-        manager.printTasks();
+//        manager.printTasks();
+        manager.printCompletedTasks();
     }
 }
